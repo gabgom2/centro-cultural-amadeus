@@ -26,7 +26,7 @@
             background-color: #6d4c41; /* Marrón medio */
             color: white;
             text-align: center;
-            padding: 20px 0px;
+            padding: 20px 40px;
         }
 
         .banner img {
@@ -52,14 +52,14 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Centro Cultural Amadeus</a>
+            <a class="navbar-brand" href="{% url 'index' %}">Centro Cultural Amadeus</a>
             <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Estudiantes</a>
+                        <a class="nav-link active" href="{% url 'estudianteregistro' %}">Estudiantes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Asignaturas</a>
@@ -67,14 +67,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Panel Docente</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li> -->
                 </ul>
             </div>
         </div>
     </nav>
-
+    {% block contenido_principal %}
     <!-- Banner -->
     <section class="banner">
         <div class="container">
@@ -91,6 +88,8 @@
             Dedicado al estudio de la música, cuenta con diferentes asignaturas para especializarse tanto en instrumento como en teoría
         </p>
     </div>
+
+    {% endblock %}
 
     <!-- Footer -->
     <footer class="footer">

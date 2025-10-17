@@ -1,8 +1,8 @@
 from django.urls import path
-from usuarios.views import renderizar_index, testing
+from usuarios.views import *
 
 urlpatterns = [
     path('', renderizar_index, name="index"),
-    path("test/", testing, name="test")
-    path("estudiantes/", estudiantes, name="estudiantes")
+    path("test/", testing, name="test"),
+    path("RegistroEstudiantes/", estudiante_registro, name="estudianteregistro")
 ]

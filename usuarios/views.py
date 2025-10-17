@@ -7,8 +7,8 @@ import datetime
 def renderizar_index(request):
     return render(request, "usuarios/index.html")
 
-def estudiantes(request):
-    return render(request, "usuarios/estudiantes.html")
+def estudiante_registro(request):
+    return render(request, "usuarios/estudianteregistro.html")
 
 
 def testing(request):
