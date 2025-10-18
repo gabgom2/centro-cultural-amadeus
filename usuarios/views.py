@@ -51,9 +51,7 @@ def asignatura_registro(request):
         
     return render(request, "usuarios/asignaturaregistro.html", {'form': form})
     
-    
-#     return render(request, "usuarios/asignaturaregistro.html", {'form': form})
-
+ 
 
 
 def testing(request):

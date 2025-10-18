@@ -18,7 +18,7 @@ class Estudiante(models.Model):
     fecha_registro = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return f"Nombre completo: {self.apellido}, {self.nombre} / DNI: {self.dni} / Nivel: {self.nivel}"
+        return f"Nombre completo: {self.apellido}, {self.nombre} / DNI: {self.dni} / Email: {self.email}"
     
 class Docente(models.Model):
     
