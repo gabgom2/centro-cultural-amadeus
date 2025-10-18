@@ -1,20 +1,3 @@
-{% extends "usuarios/index.html" %}
+{% extends "usuarios/estudianteregistro.html" %}
 
-{% block contenido_principal %}
-
-    <div class="container mt-5">
-        <h2>Registro Docente</h2>
-        
-    </div>
-
-    <div class="container mt-4">
-        <form method = "POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Registrar</button>
-
-        </form>
-    </div>
-
-
-{% endblock %}
+{% block titulo_registro %} Registro Docente {% endblock %}

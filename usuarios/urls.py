@@ -5,5 +5,6 @@ urlpatterns = [
     path('', renderizar_index, name="index"),
     path("test/", testing, name="test"),
     path("RegistroEstudiantes/", estudiante_registro, name="estudianteregistro"),
-    path("RegistroDocente/", docente_registro, name="docenteregistro")
+    path("RegistroDocente/", docente_registro, name="docenteregistro"),
+    # path("RegistroAsignatura/", asignatura_registro, name="asignaturaregistro"),
 ]
