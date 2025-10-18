@@ -29,9 +29,6 @@ def estudiante_registro(request):
     return render(request, "usuarios/estudianteregistro.html", {'form': form})
 
 def docente_registro(request):
-    # GET - Pedir info a la base de datos
-    # POST - Solicitud para crear info / manipular datos
-    
     if request.method == "POST":
         form = DocenteForm(request.POST)
         if form.is_valid():
@@ -42,6 +39,18 @@ def docente_registro(request):
     
     
     return render(request, "usuarios/docenteregistro.html", {'form': form})
+
+# def asignatura_registro(request):
+#     if request.method == "POST":
+#         form = AsignaturaForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             return redirect("index")
+#     else:
+#         form = AsignaturaForm()    
+    
+    
+#     return render(request, "usuarios/asignaturaregistro.html", {'form': form})
 
 
 
