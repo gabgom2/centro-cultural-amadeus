@@ -10,6 +10,9 @@ from usuarios.forms import *
 def renderizar_index(request):
     return render(request, "usuarios/index.html")
 
+#DRY - chequear si hay tiempo como simplificar esta sección
+
+
 def estudiante_registro(request):
     # GET - Pedir info a la base de datos
     # POST - Solicitud para crear info / manipular datos
@@ -24,6 +27,22 @@ def estudiante_registro(request):
     
     
     return render(request, "usuarios/estudianteregistro.html", {'form': form})
+
+def docente_registro(request):
+    # GET - Pedir info a la base de datos
+    # POST - Solicitud para crear info / manipular datos
+    
+    if request.method == "POST":
+        form = DocenteForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+        form = DocenteForm()    
+    
+    
+    return render(request, "usuarios/docenteregistro.html", {'form': form})
+
 
 
 def testing(request):
