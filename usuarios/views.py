@@ -40,14 +40,16 @@ def docente_registro(request):
     
     return render(request, "usuarios/docenteregistro.html", {'form': form})
 
-# def asignatura_registro(request):
-#     if request.method == "POST":
-#         form = AsignaturaForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return redirect("index")
-#     else:
-#         form = AsignaturaForm()    
+def asignatura_registro(request):
+    if request.method == "POST":
+        form = AsignaturaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("index")
+    else:
+        form = AsignaturaForm()    
+        
+    return render(request, "usuarios/asignaturaregistro.html", {'form': form})
     
     
 #     return render(request, "usuarios/asignaturaregistro.html", {'form': form})
