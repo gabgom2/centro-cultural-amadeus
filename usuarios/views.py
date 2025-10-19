@@ -10,9 +10,22 @@ from usuarios.forms import *
 def renderizar_index(request):
     return render(request, "usuarios/index.html")
 
-#DRY - chequear si hay tiempo como simplificar esta sección
 
 
+def estudiante_listado(request):
+    query = request.GET.get('q', '')
+    if query is not None:     #query: type string
+        query_estudiante = Estudiante.objects.filter(
+                        apellido__icontains = query).order_by("apellido")
+    else: 
+        query_estudiante = Estudiante.objects.all().order_by("apellido")
+    
+    contexto = {"query": query, "query_estudiante": query_estudiante}
+    return render(request, "usuarios/estudiantelistado.html", contexto)
+
+
+
+#registro formularios
 def estudiante_registro(request):
     # GET - Pedir info a la base de datos
     # POST - Solicitud para crear info / manipular datos
