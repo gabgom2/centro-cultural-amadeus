@@ -1,4 +1,4 @@
-# centro-cultural-amadeus
+# Centro Cultural Amadeus
 Página web sobre un instituto ficticio de música hecha en Django
 
 ## Instrucciones de instalación
