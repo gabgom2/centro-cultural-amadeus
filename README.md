@@ -9,7 +9,7 @@ Descargar el repositorio utilizando la pestaña **<> Code**, y descargar el arch
 
 ### **2- Creación y ejecución de entorno virtual**
 
-Con el comando `python -m venv "nombre_deseado"` se puede crear un entorno virtual. Luego de posicionarse con cd en el directorio de trabajo, se puede activarlo copiando su ruta de acceso relativa ("venv\Scripts\activate" en el caso de que nombre_deseado sea venv).
+Con el comando `python -m venv "nombre_deseado"` se puede crear un entorno virtual. Luego de posicionarse con cd en el directorio de trabajo, se puede activarlo copiando su ruta de acceso relativa (`"nombre_deseado\Scripts\activate"`).
 
 ### **3- Instalación de requerimentos**
 
