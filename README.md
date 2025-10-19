@@ -5,7 +5,7 @@ Página web sobre un instituto ficticio de música hecha en Django
 
 ### **1- Descarga**
 
-Descargar el repositorio utilizando la pestaña "<> Code", y descargar el archivo en formato zip. Descomprimirlo y extraerlo en el directorio deseado. Alternativamente, puede descargarse mediante git clone dentro de esa misma pestaña (Requiere previa instalación de git. Luego de instalarlo, abrir una ventana de git bash y colocarse en el directorio deseado con el comando `cd <ruta de trabajo>` , o alternativamente ejecutar la ventana en dicho directorio pulsando click derecho, Open git Bash here)
+Descargar el repositorio utilizando la pestaña **<> Code**, y descargar el archivo en formato zip. Descomprimirlo y extraerlo en el directorio deseado. Alternativamente, puede descargarse mediante git clone dentro de esa misma pestaña (Requiere previa instalación de git. Luego de instalarlo, abrir una ventana de git bash y colocarse en el directorio deseado con el comando `cd <ruta de trabajo>` , o alternativamente ejecutar la ventana en dicho directorio pulsando click derecho, **Open git Bash here**)
 
 ### **2- Creación y ejecución de entorno virtual**
 
