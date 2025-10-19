@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from datetime import datetime
+from django.contrib import messages
 from usuarios.forms import *
 #from django.http import HttpResponse
 
@@ -10,7 +11,12 @@ from usuarios.forms import *
 def renderizar_index(request):
     return render(request, "usuarios/index.html")
 
+#crear en el futuro funcion registrar(Clase, request?, mensaje_exito). 
+#django.shortcuts -> redirect sirve para redirigir
 
+#**********************************************************************
+
+# direcciones de listado query
 
 def estudiante_listado(request):
     query = request.GET.get('q', '').strip()
@@ -30,7 +36,8 @@ def estudiante_listado(request):
 
 
 
-#registro formularios
+# registro formularios
+
 def estudiante_registro(request):
     # GET - Pedir info a la base de datos
     # POST - Solicitud para crear info / manipular datos
@@ -39,7 +46,8 @@ def estudiante_registro(request):
         form = EstudianteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("index")
+            messages.success(request, "Estudiante registrado/a con éxito.")
+            form = EstudianteForm()  # limpiar el formulario       
     else:
         form = EstudianteForm()    
     
@@ -51,7 +59,8 @@ def docente_registro(request):
         form = DocenteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("index")
+            messages.success(request, "Docente registrado/a con éxito.")
+            form = DocenteForm()  # limpiar el formulario  
     else:
         form = DocenteForm()    
     
@@ -63,14 +72,15 @@ def asignatura_registro(request):
         form = AsignaturaForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect("index")
+            messages.success(request, "Asignatura registrada con éxito.")
+            form = AsignaturaForm()  # limpiar el formulario
     else:
         form = AsignaturaForm()    
         
     return render(request, "usuarios/asignaturaregistro.html", {'form': form})
     
  
-
+# testing
 
 def testing(request):
     fecha_actual = datetime(2025, 10, 17, 4, 30)

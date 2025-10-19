@@ -9,6 +9,18 @@
     </div>
 
     <div class="container mt-4">
+
+        <!-- Mostrar mensajes -->
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success text-center" role="alert" id="mensaje-exito">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <!-- Formulario -->
+        
         <form method = "POST">
             {% csrf_token %}
             {{ form.as_p }}
@@ -16,6 +28,7 @@
 
         </form>
     </div>
+
 
 
 {% endblock %}
