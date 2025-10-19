@@ -7,4 +7,5 @@ urlpatterns = [
     path("RegistroEstudiantes/", estudiante_registro, name="estudianteregistro"),
     path("RegistroDocente/", docente_registro, name="docenteregistro"),
     path("RegistroAsignatura/", asignatura_registro, name="asignaturaregistro"),
+    path("ListadoEstudiantes/", estudiante_listado, name="estudiantelistado")
 ]
