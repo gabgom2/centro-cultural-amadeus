@@ -63,14 +63,16 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'estudiantelistado' %}">Listado Estudiantes</a>
                     </li>                    
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'estudianteregistro' %}">Reg. Estudiantes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'asignaturaregistro' %}">Reg. Asignaturas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'docenteregistro' %}">Reg. Docentes</a>
+                    <!-- Menú desplegable -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Registro
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{% url 'estudianteregistro' %}">Estudiantes</a></li>
+                            <li><a class="dropdown-item" href="{% url 'asignaturaregistro' %}">Asignaturas</a></li>
+                            <li><a class="dropdown-item" href="{% url 'docenteregistro' %}">Docentes</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
